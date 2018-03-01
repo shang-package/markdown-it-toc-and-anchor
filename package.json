@@ -14,7 +14,6 @@
   "repository": "https://github.com/medfreeman/markdown-it-toc-and-anchor.git",
   "main": "index.js",
   "dependencies": {
-    "clone": "^2.1.0",
-    "uslug": "^1.0.4"
+    "clone": "^2.1.0"
   }
 }
