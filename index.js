@@ -193,6 +193,10 @@ var _clone = require("clone");
 
 var _clone2 = _interopRequireDefault(_clone);
 
+var _uslug = require("uslug");
+
+var _uslug2 = _interopRequireDefault(_uslug);
+
 var _token = require("markdown-it/lib/token");
 
 var _token2 = _interopRequireDefault(_token);
@@ -213,7 +217,7 @@ var repeat = function repeat(string, num) {
 };
 
 var makeSafe = function makeSafe(string, headingIds) {
-  var key = encodeURIComponent(string); // slugify
+  var key = encodeURIComponent((0, _uslug2.default)(string)); // slugify
   if (!headingIds[key]) {
     headingIds[key] = 0;
   }
