@@ -247,7 +247,7 @@ var renderAnchorLink = function renderAnchorLink(anchor, options, tokens, idx) {
   var _tokens$children;
 
   var linkTokens = [_extends({}, new _token2.default("link_open", "a", 1), {
-    attrs: [["class", options.anchorClassName], ["href", "#" + encodeURIComponent(anchor)]]
+    attrs: [["class", options.anchorClassName], ["href", "#" + decodeURIComponent(anchor)]]
   })].concat(_toConsumableArray(renderAnchorLinkSymbol(options)), [new _token2.default("link_close", "a", -1)]);
 
   // `push` or `unshift` according to anchorLinkBefore option
