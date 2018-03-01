@@ -217,7 +217,7 @@ var repeat = function repeat(string, num) {
 };
 
 var makeSafe = function makeSafe(string, headingIds) {
-  var key = (0, _uslug2.default)(string); // slugify
+  var key = encodeURIComponent((0, _uslug2.default)(string)); // slugify
   if (!headingIds[key]) {
     headingIds[key] = 0;
   }
@@ -247,7 +247,7 @@ var renderAnchorLink = function renderAnchorLink(anchor, options, tokens, idx) {
   var _tokens$children;
 
   var linkTokens = [_extends({}, new _token2.default("link_open", "a", 1), {
-    attrs: [["class", options.anchorClassName], ["href", "#" + decodeURIComponent(anchor)]]
+    attrs: [["class", options.anchorClassName], ["href", "#" + anchor]]
   })].concat(_toConsumableArray(renderAnchorLinkSymbol(options)), [new _token2.default("link_close", "a", -1)]);
 
   // `push` or `unshift` according to anchorLinkBefore option
